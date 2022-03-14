@@ -9,8 +9,6 @@ namespace BlackPearl
 {
     public class PearlList
     {
-        
-
         [Key]
         public int PearlListID { get; set; }
 
@@ -73,7 +71,7 @@ namespace BlackPearl
             return sRet;
         }
 
-        // Innan jag gjorde en Factory användes detta.
+        //Innan jag gjorde en Factory användes detta.
         //public PearlList(int NrOfMembers)
         //{
         //    for (int i = 0; i < NrOfMembers; i++)
@@ -81,19 +79,19 @@ namespace BlackPearl
         //        _pearllist.Add(new Pearl());
         //    }
         //}
-        
+
         //Nu med Factory
-        internal static class Factory
-        {
-            internal static PearlList CreateRandomList(int NrOfPearls)
-            {
-                var pearlList = new PearlList();
-                for (int i = 0; i < NrOfPearls; i++)
-                {
-                    pearlList._pearllist.Add(Pearl.Factory.CreateRandomPearl());
-                }
-                return pearlList;
-            }
-        }
+        //internal static class Factory
+        //{
+        //    internal static PearlList CreateRandomList(int NrOfPearls)
+        //    {
+        //        var pearlList = new PearlList();
+        //        for (int i = 0; i < NrOfPearls; i++)
+        //        {
+        //            pearlList._pearllist.Add(Pearl.Factory.CreateRandomPearl());
+        //        }
+        //        return pearlList;
+        //    }
+        //}
     }
 }

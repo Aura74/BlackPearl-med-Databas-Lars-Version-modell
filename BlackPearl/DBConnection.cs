@@ -18,8 +18,6 @@ namespace SeidoDemoDb
         {
             get
             {
-                //LocalApplicationData is a good place to store configuration files.
-                //Copy appsettings.json to the folder in documentPath
                 var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 documentPath = Path.Combine(documentPath, "AOOP2", "EFC", "DbConnections");
                 if (!Directory.Exists(documentPath)) Directory.CreateDirectory(documentPath);

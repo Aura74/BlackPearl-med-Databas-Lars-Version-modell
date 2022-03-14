@@ -13,6 +13,7 @@ namespace BlackPearl
 
         [Key]
         public int PearlID { get; set; }
+        public int PearlListID { get; set; }
         public int Diameter { get; set; }
         public string Color { get; set; } // kan vara Enum om man vill
         public string Shape { get; set; }
@@ -101,20 +102,20 @@ namespace BlackPearl
         }
 
         // Måste vara med
-        public Pearl()
+        public Pearl(int pearlListId)
         {
             RandomInit();
         }
 
         // Factory
-        public static class Factory
-        {
-            public static Pearl CreateRandomPearl()
-            {
-                var p = new Pearl();
-                p.RandomInit();
-                return p;
-            }
-        }
+        //public static class Factory
+        //{
+        //    public static Pearl CreateRandomPearl()
+        //    {
+        //        var p = new Pearl();
+        //        p.RandomInit();
+        //        return p;
+        //    }
+        //}
     }
 }
